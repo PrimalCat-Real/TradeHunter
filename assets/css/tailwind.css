@@ -2,17 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+font-family: 'Inter';
+src: url('~/static/Inter-VariableFont_slnt,wght.ttf');
+}
+
 @layer components {
     .active-lang{
         @apply text-white
     }
 }
 
-.theme-light {
---background: #f8f8f8;
---text: #313131;
+@layer components {
+    .btn-icon{
+        @apply outline-none
+    }
 }
-.theme-dark {
---background: #313131;
---text: #f8f8f8;
+
+html {
+    @apply transition-colors ease-in duration-1000;
+    @apply bg-gradient-to-b bg-no-repeat w-screen ;
 }

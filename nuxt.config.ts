@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
     modules: [
         ['@nuxtjs/i18n', {
-            locales: [
+            locales: [  
               {
                 code: 'en',
                 file: 'en.json'
@@ -20,6 +20,16 @@ export default defineNuxtConfig({
             lazy: true,
             langDir: 'locales/'
           }],
-        '@nuxtjs/tailwindcss'
-    ]
+        '@nuxtjs/tailwindcss',
+        '@nuxtjs/color-mode',
+    ],
+    colorMode: {
+      preference: 'system',
+      fallback: 'light', 
+      classSuffix: ''
+    },
+    tailwindcss: {
+      cssPath: '~/assets/css/tailwind.css',
+
+    }
 })

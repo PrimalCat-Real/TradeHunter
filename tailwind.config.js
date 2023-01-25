@@ -1,31 +1,27 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    `components/**/*.{vue,js}`,
-    `layouts/**/*.vue`,
-    `pages/**/*.vue`,
-    `composables/**/*.{js,ts}`,
-    `plugins/**/*.{js,ts}`,
-    `App.{js,ts,vue}`,
-    `app.{js,ts,vue}`
-  ],
+  darkMode: 'class',
   theme: {
+    fontFamily: {
+      'inter': ["'Inter'", 'sans-serif'],
+    },
     extend: {
       colors: {
-        themeBackground: 'var(--background)',
-        themeText: 'var(--text)',
-        primary: {
-          grey: {
-            default: "#626C74",
-            200: "#626C74",
-            100: '#696D72',
-            400: '#3C4249',
-            900: '#30353E',
-          },
+        // themeBackground: 'var(--background)',
+        // themeText: 'var(--text)',
+        // themeTextGrey: 'var(--text-grey)',
+        // themeTextLightGrey: 'var(--text-light-grey)',
+        light: {
+          text: "#17191E",
+          default: "#F8F8F8",
+          primalGrey: "#B6B5B7",
+          secondaryGrey: "#65656C",
         },
-        secondary: {
-          'default': '#f0f0f0',
-          'dark': '#707070'
+        dark: {
+          default: "#17191E",
+          text: "#F8F8F8",
+          primalGrey: "#65656C",
+          secondaryGrey: "#B6B5B7",
         },
       }
     },
