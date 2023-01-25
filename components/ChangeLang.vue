@@ -1,6 +1,6 @@
 <template>
   <div class="locale-changer">
-    <button v-for="(lang, i) in langs" :key="`Lang${i}`" @click="changeLanguage(lang)" :class="{'active-lang': $i18n.locale === lang}">{{ lang }}</button>
+    <button v-for="(lang, i) in langs" :key="`Lang${i}`" @click.prevent.stop="$i18n.setLocale(lang)" :class="{'active-lang': $i18n.locale === lang}">{{ lang }}</button>
   </div>
 </template>
 
@@ -8,13 +8,8 @@
 export default {
   name: 'locale-changer',
   data () {
-    return { langs: ['ru', 'en', 'ua'] }
-  },
-  methods: {
-    changeLanguage(lang) {
-        this.$i18n.locale = lang
-    }
-}
+    return { langs: ['en', 'ru', 'ua'] }
+  }
 }
 </script>
 
