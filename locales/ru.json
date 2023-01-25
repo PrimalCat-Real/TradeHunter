@@ -1,4 +1,6 @@
 {
     "pages.title.index": "",
-    "pages.title.market": "рынок"
+    "market":{
+        "title": "рынок"
+    }
 }

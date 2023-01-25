@@ -9,7 +9,7 @@ src: url('~/static/Inter-VariableFont_slnt,wght.ttf');
 
 @layer components {
     .active-lang{
-        @apply text-white
+        @apply dark:text-dark-text !text-light-text 
     }
 }
 
